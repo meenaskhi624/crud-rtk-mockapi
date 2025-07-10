@@ -20,8 +20,16 @@ function Update() {
     e.preventDefault()
     // console.log(product,"updated product");
 
+    // try {
+    //  await axios.put(${import.meta.env.VITE_SERVER_URL}/${product.id},product);
+    //   toast.success("You have successfully updated Product");
+    //   localStorage.clear();
+    //   navigate("/");
+    // } catch (error) {
+    //   console.log(error)
+    // }
     try {
-     await axios.put(${import.meta.env.VITE_SERVER_URL/${product.id} `,product);
+     await axios.put(`${import.meta.env.VITE_SERVER_URL}/${product.id}`,product);
       toast.success("You have successfully updated Product");
       localStorage.clear();
       navigate("/");

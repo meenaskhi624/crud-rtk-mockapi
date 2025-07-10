@@ -17,7 +17,7 @@ function Create() {
   const handleSubmit = async (e) => {
     e.preventDefault();
     try {
-      await axios.post686b645ee559eba9087253bc.mockapi.io/crud-project/)
+      await axios.post(import.meta.env.VITE_SERVER_URL,product)
       setProduct({
         productName: "",
         desc: "",

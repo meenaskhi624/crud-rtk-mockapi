@@ -20,8 +20,8 @@ function Product() {
 
   useEffect(() => {
     async function getSingleProduct() {
-      try {
-        const response = await axios.get(`https://686b645de559eba9087253b2.mockapi.io/crud-project/${id}`)
+       try {
+        const response = await axios.get(`${import.meta.env.VITE_SERVER_URL}/${id}`)
 
         // console.log(response.data);
         setSingleProduct(response.data);
@@ -31,10 +31,13 @@ function Product() {
     }
     getSingleProduct()
   }, [])
+    
+  
 
   async function handleDelete(){
+    
     try {
-    await  axios.delete(`https://686b645de559eba9087253b2.mockapi.io/crud-project/${id}`);
+    await  axios.delete(`${import.meta.env.VITE_SERVER_URL}/${id}`);
     toast.success("You have successfully deleted Product");
     navigate("/");
     } catch (error) {

@@ -57,8 +57,8 @@ function Home() {
   useEffect(()=>{
     async function getAPI(){
       try {
-      const response=  await axios.(get{import.meta.env.VITE_SERVER_URL)
-      // console.log(response.data);
+      const response=  await axios.get(import.meta.env.VITE_SERVER_URL)
+      console.log(response.data);
       setProductData(response.data);
       } catch (error) {
         console.log(error)
@@ -69,7 +69,7 @@ function Home() {
 
 const handleAdd=(data)=>{
     dispatch(add(data))
-    toast .success("Your product added suuccessfully");
+    toast.success("Your product added suuccessfully");
   }
   return (
     <>
